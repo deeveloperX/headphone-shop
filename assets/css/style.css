@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: Gilroy; */
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+::selection {
+  color: white;
+  background: green;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0,36,0);
+background: linear-gradient(0deg, rgba(0,36,0,1) 0%, rgba(9,121,9,1) 35%, rgb(42, 196, 42) 100%);
+  border-radius: 10px;
+}
+
+body{
+  background-image: url("../images/bg-dark-with-green-and-headphone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* navbar start */
+nav{
+  height: 15vh;
+}
+
+.web-logo{
+  width: 80px;
+}
+
+.nav-link{
+  font-size: 20px;
+}
+/* navbar end */
+
+.banner-section{
+  height: 85vh;
+}
+
+.three-lines{
+  width: 20px;
+  position: relative;
+  top: 150px;
+  left: 70px;
+}
+.line{
+  background-color: green;
+  height: 2px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.banner-text-div{
+  width: fit-content;
+  text-align: start;
+  padding-left: 120px;
+  padding-top: 40px;
+  /* position: relative;
+  left: 140px;
+  top: 40px; */
+}
+
+.banner-text{
+  color: #fff;
+  font-weight: bolder;
+  font-size: 6vw;
+}
+.banner-text::after{
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+/* banner shop now button start */
+
+.animated-button {
+  position: relative;
+  margin-left: 120px;
+  margin-top: 20px;
+  /* top: 60px;
+  left: 140px; */
+  display: inline-block;
+  padding: 6px 10px;
+  border: 2px solid green;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent!important;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+/* .animated-button:hover {
+  box-shadow: 0 0 0 5px green;
+  color: #ffffff;
+} */
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+/* banner shop now button end */
+
+.banner-bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin-top: 70px;
+  /* position: relative;
+  top: 100px; */
+}
+
+.fa-brands{
+  color: #d1cfcf;
+  margin: 0 5px;
+  font-size: 22px;
+  transition: all ease .5s;
+}
+.fa-brands:hover{
+  color: #fff;
+  transform: scale(1.3);
+}
+
+.notify-bag {
+  position: relative;
+  display: inline-block;
+}
+
+.notify-bag i {
+  color: #171717;
+  background-color: green;
+  padding: 17px;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.notify-bag .badge {
+  position: absolute;
+  top: 0px;
+  right: -3px;
+  background-color: red;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+
+
+@media only screen and (max-width: 576px){
+  body{
+    background-image: url("../images/portrait-banner-center.jpg");
+  }
+  .animated-button{
+    /* top: 190px;
+    left: 60px; */
+    padding: 10px 16px;
+  }
+}
+
